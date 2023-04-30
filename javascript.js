@@ -10,7 +10,14 @@ function Book(title, author, pages, read) {
   // the constructor...
 }
 
-Book.prototype.toggleRead = 
+Book.prototype.toggleRead = function () {
+  this.read = !this.read
+}
+
+function toggleRead(index) {
+  myLibrary[index].toggleRead()
+  render()
+}
 
 function render () {
   let libraryEl = document.querySelector('#library')
